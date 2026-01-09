@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/Portafolio-Clean-Code",
-  assetPrefix: "/Portafolio-Clean-Code",
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
