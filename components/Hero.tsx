@@ -94,7 +94,8 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="flex flex-wrap justify-center gap-fluid-s w-full"
                     >
-                        <a href="/cv.pdf" download className="flex-1 sm:flex-none">
+                        <a href="#" download className="flex-1 sm:flex-none">
+                            {/* Nota: Asegúrate de añadir tu archivo cv.pdf en la carpeta public/ */}
                             <StarButton
                                 className="w-full h-14 px-10 rounded-full text-base font-black shadow-xl"
                                 lightColor={isDark ? "#3b82f6" : "#2563eb"}

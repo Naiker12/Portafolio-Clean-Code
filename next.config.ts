@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/Portafolio-Clean-Code",
   // @ts-ignore
   turbopack: {
     root: "C:/Users/gomez/Downloads/portafolio",
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
