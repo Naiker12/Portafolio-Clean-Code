@@ -5,10 +5,6 @@ const nextConfig: NextConfig = {
   basePath: "/Portafolio-Clean-Code",
   assetPrefix: "/Portafolio-Clean-Code",
   trailingSlash: true,
-  // @ts-ignore
-  turbopack: {
-    root: "C:/Users/gomez/Downloads/portafolio",
-  },
   images: {
     unoptimized: true,
     remotePatterns: [
