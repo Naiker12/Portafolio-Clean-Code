@@ -7,7 +7,7 @@ export default function Footer() {
                 </div>
 
                 <p className="text-zinc-500 text-sm font-medium text-center md:text-left">
-                    © {new Date().getFullYear()} Portfolio Profesional. Code Clean. Diseñado con precisión y construido con Next.js.
+                    © {new Date().getFullYear()} Naiker | Code Clean. Diseñado con precisión y construido con Next.js.
                 </p>
 
                 <div className="flex gap-6 md:gap-8 text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-zinc-600">
