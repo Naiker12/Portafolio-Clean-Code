@@ -7,6 +7,7 @@ import Image from "next/image";
 import { StarButton } from "@/components/ui/star-button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Hero() {
     const { theme, resolvedTheme } = useTheme();
@@ -94,7 +95,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="flex flex-wrap justify-center gap-fluid-s w-full"
                     >
-                        <a href="#" download className="flex-1 sm:flex-none">
+                        <a href={getAssetPath("/cv.pdf")} download className="flex-1 sm:flex-none">
                             {/* Nota: Asegúrate de añadir tu archivo cv.pdf en la carpeta public/ */}
                             <StarButton
                                 className="w-full h-14 px-10 rounded-full text-base font-black shadow-xl"

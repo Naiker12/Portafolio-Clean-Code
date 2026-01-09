@@ -5,6 +5,7 @@ import { Briefcase } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { useRef } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 const experiences = [
     {
