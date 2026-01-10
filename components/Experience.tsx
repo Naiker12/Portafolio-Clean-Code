@@ -6,6 +6,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import { useRef } from "react";
 import Image from "next/image";
 import { getAssetPath } from "@/lib/utils";
+import perfilPic from "@/app/assets/perfil.jpg";
 
 const experiences = [
     {
@@ -52,7 +53,7 @@ export default function Experience() {
                 >
                     <div className="w-12 h-12 shrink-0 rounded-2xl bg-blue-500/5 flex items-center justify-center p-1 border border-white/5 overflow-hidden">
                         <Image
-                            src="/perfil.jpg"
+                            src={perfilPic}
                             alt="Naiker"
                             width={48}
                             height={48}

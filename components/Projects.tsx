@@ -12,7 +12,6 @@ import {
 import { Visual2 } from "@/components/ui/visual-2";
 
 import Image from "next/image";
-import { getAssetPath } from "@/lib/utils";
 
 const projects = [
     {
@@ -117,7 +116,7 @@ export default function Projects() {
                             <AnimatedCard className="w-full group/card border-zinc-200/10 bg-zinc-900/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 flex flex-col h-full">
                                 <CardVisual className="h-[200px] md:h-[220px] w-full relative overflow-hidden shrink-0 group/visual">
                                     <Image
-                                        src={getAssetPath(project.image)}
+                                        src={project.image}
                                         alt={project.title}
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover/card:scale-110"

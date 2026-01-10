@@ -5,6 +5,8 @@ import { Server, Shield, Share2, Zap } from "lucide-react";
 import Image from "next/image";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { getAssetPath } from "@/lib/utils";
+import perfilPic from "@/app/assets/perfil.jpg";
+import codeCleanPic from "@/app/assets/codeclean.jpg";
 
 export default function About() {
     return (
@@ -24,7 +26,7 @@ export default function About() {
                     >
                         <div className="aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/5] relative rounded-[40px] md:rounded-[60px] overflow-hidden shadow-2xl">
                             <Image
-                                src={getAssetPath("/codeclean.jpg")}
+                                src={codeCleanPic}
                                 alt="Naiker Coding"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -47,7 +49,7 @@ export default function About() {
                                 </p>
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 rounded-2xl overflow-hidden border-2 border-blue-500/30 p-0.5 bg-black/50">
-                                        <Image src={getAssetPath("/perfil.jpg")} alt="Naiker" width={48} height={48} className="object-cover rounded-xl" />
+                                        <Image src={perfilPic} alt="Naiker" width={48} height={48} className="object-cover rounded-xl" />
                                     </div>
                                     <div>
                                         <div className="font-black text-sm text-white uppercase tracking-wider">Naiker</div>

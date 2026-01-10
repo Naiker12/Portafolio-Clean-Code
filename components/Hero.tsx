@@ -7,6 +7,7 @@ import Image from "next/image";
 import { StarButton } from "@/components/ui/star-button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import perfilPic from "@/app/assets/perfil.jpg";
 import { getAssetPath } from "@/lib/utils";
 
 export default function Hero() {
@@ -48,7 +49,7 @@ export default function Hero() {
                             <div className="absolute inset-0 bg-blue-500 blur-2xl opacity-20 animate-pulse" />
                             <div className="relative w-20 h-20 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-blue-500/30 p-1 bg-black/50 backdrop-blur-md">
                                 <Image
-                                    src="/perfil.jpg"
+                                    src={perfilPic}
                                     alt="Avatar"
                                     width={128}
                                     height={128}
@@ -107,7 +108,7 @@ export default function Hero() {
                                 </span>
                             </StarButton>
                         </a>
-                        <a href="https://linkedin.com/in/naiker" target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none">
+                        <a href="https://www.linkedin.com/in/naiker-gomez-caraballo-a97449293/" target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none">
                             <StarButton
                                 className="w-full h-14 px-10 rounded-full text-base font-bold shadow-xl"
                                 lightColor={isDark ? "#0A66C2" : "#004182"}
