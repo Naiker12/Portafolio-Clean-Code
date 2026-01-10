@@ -87,7 +87,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="text-fluid-base text-zinc-400 max-w-2xl mb-fluid-m leading-relaxed"
                     >
-                        +4 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación de Cartagena, Colombia. <br className="hidden md:block" /> Especializado en el desarrollo backend.
+                        +4 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación<br className="hidden md:block" /> Especializado en el desarrollo backend.
                     </motion.p>
 
                     <motion.div
