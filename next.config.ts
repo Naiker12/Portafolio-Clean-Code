@@ -8,12 +8,13 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   // @ts-ignore
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // @ts-ignore
   typescript: {
     ignoreBuildErrors: true,
+  },
+  experimental: {
+    turbopack: {
+      root: process.cwd(),
+    },
   },
 };
 

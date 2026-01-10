@@ -12,16 +12,25 @@ interface Point {
     icon?: HTMLImageElement
 }
 
+import nextjsIcon from "@/app/assets/icon-dark/nextjs_icon_dark.svg";
+import postgresqlIcon from "@/app/assets/icon-dark/postgresql.svg";
+import mysqlIcon from "@/app/assets/icon-dark/mysql-icon-dark.svg";
+import mongodbIcon from "@/app/assets/icon-dark/mongodb-icon-dark.svg";
+import redisIcon from "@/app/assets/icon-dark/redis.svg";
+import fastapiIcon from "@/app/assets/icon-dark/fastapi.svg";
+import tailwindIcon from "@/app/assets/icon-dark/tailwindcss.svg";
+import githubIcon from "@/app/assets/icon-dark/github_dark.svg";
+
 const ICONS = [
-    "/icon-dark/nextjs_icon_dark.svg",
-    "/icon-dark/postgresql.svg",
-    "/icon-dark/mysql-icon-dark.svg",
-    "/icon-dark/mongodb-icon-dark.svg",
-    "/icon-dark/redis.svg",
-    "/icon-dark/fastapi.svg",
-    "/icon-dark/tailwindcss.svg",
-    "/icon-dark/github_dark.svg",
-]
+    nextjsIcon.src,
+    postgresqlIcon.src,
+    mysqlIcon.src,
+    mongodbIcon.src,
+    redisIcon.src,
+    fastapiIcon.src,
+    tailwindIcon.src,
+    githubIcon.src,
+];
 
 export function TechNetwork() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
