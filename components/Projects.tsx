@@ -12,13 +12,20 @@ import {
 import { Visual2 } from "@/components/ui/visual-2";
 
 import Image from "next/image";
+import cocaColaPic from "@/app/assets/projects/cocacola.png";
+import portalDatosPic from "@/app/assets/projects/portaldedatosabietos.png";
+import dragonBallPic from "@/app/assets/projects/DragonBallAPI.png";
+import callConnectPic from "@/app/assets/projects/CallConnect.png";
+import mercadoExpressPic from "@/app/assets/projects/Mercado-Express.png";
+import galleryPic from "@/app/assets/projects/Gallery.png";
+import tiendaVirtualPic from "@/app/assets/projects/Tienda-Virtual.png";
 
 const projects = [
     {
         title: "Sistema de Gestión Coca-Cola",
         description: "Aplicación de escritorio para la gestión de productos y administración de personal de la empresa Coca-Cola. Desarrollada íntegramente con interfaces gráficas JFrame, lógica empresarial pura en Java y persistencia de datos.",
         tech: ["Java", "Swing / JFrame", "NetBeans", "MySQL"],
-        image: "/project/cocacola.png",
+        image: cocaColaPic,
         link: "https://www.youtube.com/watch?v=kGjp3VdUktI",
         github: "https://github.com/Naiker12/SOFTWARE-DE-GESTI-N-DE-PRODUCTO-DE-COCA-COLA",
         colors: { main: "#F40009", secondary: "#000000" }
@@ -27,7 +34,7 @@ const projects = [
         title: "Portal de Datos Abiertos",
         description: "Dashboard administrativo premium para la gestión y visualización de datos gubernamentales. Incluye autenticación avanzada, gestión de permisos granular, visualización de métricas en tiempo real con Recharts y una arquitectura modular escalable.",
         tech: ["React 18", "TypeScript", "Tailwind 4", "Framer Motion", "Recharts", "Vite"],
-        image: "/project/portaldedatosabietos.png",
+        image: portalDatosPic,
         link: "https://github.com/Naiker12/portal-datos-abiertos",
         github: "https://github.com/Naiker12/portal-datos-abiertos",
         colors: { main: "#3b82f6", secondary: "#60a5fa" }
@@ -36,7 +43,7 @@ const projects = [
         title: "DragonBall - API",
         description: "DragonBallAPI es una API interactiva que permite a los desarrolladores acceder a información detallada sobre el universo de Dragon Ball. La plataforma proporciona datos actualizados sobre personajes, transformaciones, técnicas y más.",
         tech: ["Ionic", "Angular", "Firebase", "CSS"],
-        image: "/project/DragonBallAPI.png",
+        image: dragonBallPic,
         link: "https://naiker12.github.io/dragolBall-ionic-angular-ionic-taller/dragol-ball",
         github: "https://github.com/Naiker12/dragolBall-ionic-angular-ionic-taller.git",
         colors: { main: "#f59e0b", secondary: "#ef4444" }
@@ -45,7 +52,7 @@ const projects = [
         title: "Call - Connect",
         description: "Aplicación de videollamadas de alta fidelidad desarrollada con Ionic y Angular. Utiliza Firebase y Supabase para la gestión de señalización, autenticación y presencia en tiempo real.",
         tech: ["Ionic", "Angular", "Firebase", "Supabase", "CSS"],
-        image: "/project/CallConnect.png",
+        image: callConnectPic,
         link: "https://github.com/Naiker12/CallConnect-Ionic-Angular-",
         github: "https://github.com/Naiker12/CallConnect-Ionic-Angular-",
         colors: { main: "#8b5cf6", secondary: "#6366f1" }
@@ -54,7 +61,7 @@ const projects = [
         title: "Mercado Express",
         description: "Aplicación móvil de e-commerce construida con Ionic y Angular consumiendo la API de FakeStore. Incluye listado de productos, detalles, carrito de compras y autenticación básica. Ideal como ejemplo de tienda online adaptable.",
         tech: ["Ionic", "Angular", "Firebase", "Tailwind CSS"],
-        image: "/project/Mercado-Express.png",
+        image: mercadoExpressPic,
         link: "https://www.youtube.com/watch?si=kfdNEZ22GXp67-Kz&v=92VdP308iJM&feature=youtu.be",
         github: "https://github.com/Naiker12/ionic-angular-fakestore-ecommerce.git",
         colors: { main: "#3b82f6", secondary: "#10b981" }
@@ -63,7 +70,7 @@ const projects = [
         title: "Gallery - App",
         description: "Aplicación móvil para la gestión y carga de fotografías en la nube. Implementa un sistema de almacenamiento seguro y visualización optimizada de medios digitales.",
         tech: ["Ionic", "Angular", "Firebase", "Supabase", "CSS"],
-        image: "/project/Gallery.png",
+        image: galleryPic,
         link: "https://github.com/Naiker12/Gallery",
         github: "https://github.com/Naiker12/Gallery",
         colors: { main: "#ec4899", secondary: "#f43f5e" }
@@ -72,7 +79,7 @@ const projects = [
         title: "Tienda Virtual",
         description: "Aplicación web de tienda virtual con gestión de productos, carrito de compras y panel de administración dinámico. Creado con un stack robusto para garantizar eficiencia y seguridad en las transacciones.",
         tech: ["PHP", "JavaScript", "MySQL", "Bootstrap", "Tailwind"],
-        image: "/project/Tienda-Virtual.png",
+        image: tiendaVirtualPic,
         link: "https://github.com/Naiker12/Tienda-virtual",
         github: "https://github.com/Naiker12/Tienda-virtual",
         colors: { main: "#10b981", secondary: "#3b82f6" }

@@ -12,6 +12,7 @@ import { HyperspaceBackground } from "@/components/ui/hyperspace-background";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { BorderBeam } from "@/components/ui/border-beam";
+import perfilPic from "@/app/assets/perfil.jpg";
 
 const skillCategories = [
     {
@@ -110,7 +111,7 @@ export default function Skills() {
                                 size={140}
                                 className="z-10"
                                 images={[
-                                    { name: "Perfil", url: "/perfil.jpg" }
+                                    { name: "Perfil", url: perfilPic.src }
                                 ]}
                             >
                                 {orbitData.map((orbit, index) => (
