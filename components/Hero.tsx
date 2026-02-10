@@ -87,7 +87,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="text-fluid-base text-zinc-400 max-w-2xl mb-fluid-m leading-relaxed"
                     >
-                        +4 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación<br className="hidden md:block" /> Especializado en el desarrollo backend.
+                        +3 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación<br className="hidden md:block" /> Especializado en el desarrollo backend.
                     </motion.p>
 
                     <motion.div
@@ -96,8 +96,8 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="flex flex-wrap justify-center gap-fluid-s w-full"
                     >
-                        <a href={getAssetPath("/cv.pdf")} download className="flex-1 sm:flex-none">
-                            {/* Nota: Asegúrate de añadir tu archivo cv.pdf en la carpeta public/ */}
+                        <a href={getAssetPath("/cv-naiker.pdf")} download className="flex-1 sm:flex-none">
+                            {/* Nota: Asegúrate de añadir tu archivo cv-naiker.pdf en la carpeta public/ */}
                             <StarButton
                                 className="w-full h-14 px-10 rounded-full text-base font-black shadow-xl"
                                 lightColor={isDark ? "#3b82f6" : "#2563eb"}

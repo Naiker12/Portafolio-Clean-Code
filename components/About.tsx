@@ -78,7 +78,7 @@ export default function About() {
 
                             <div className="space-y-6">
                                 <p className="text-zinc-500 dark:text-zinc-400 text-fluid-base leading-relaxed text-balance">
-                                    Soy <span className="text-zinc-900 dark:text-white font-bold">Naiker</span>, Ingeniero de Software con más de <span className="text-blue-500 font-bold">+4 años de experiencia</span> transformando visiones complejas en sistemas digitales de alto impacto. Mi enfoque principal es el desarrollo de arquitecturas robustas bajo la filosofía de <span className="text-blue-500 font-bold italic">Code Clean</span>.
+                                    Soy <span className="text-zinc-900 dark:text-white font-bold">Naiker</span>, Ingeniero de Software con más de <span className="text-blue-500 font-bold">+3 años de experiencia</span> transformando visiones complejas en sistemas digitales de alto impacto. Mi enfoque principal es el desarrollo de arquitecturas robustas bajo la filosofía de <span className="text-blue-500 font-bold italic">Code Clean</span>.
                                 </p>
                                 <p className="text-zinc-500 dark:text-zinc-400 text-fluid-base leading-relaxed text-balance">
                                     Actualmente lidero la arquitectura de dashboards y portales de datos abiertos en la <span className="text-zinc-900 dark:text-white font-bold">Alcaldía de Cartagena</span>, donde aplico mi dominio en el stack moderno de React y Node.js para mejorar la transparencia gubernamental.
