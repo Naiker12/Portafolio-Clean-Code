@@ -1,0 +1,64 @@
+.os-settings-app { padding: 28px; max-width: 780px; margin: auto; }
+.os-settings-app > p { color: #bcb5c4; font-size: 13px; }
+.os-settings-app section { margin-top: 26px; }
+.os-settings-app h4 { font-size: 13px; font-weight: 600; margin-bottom: 13px; }
+.os-setting-wallpapers { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.os-setting-wallpapers button { padding: 5px; border: 2px solid transparent; border-radius: 12px; background: #ffffff06; }
+.os-setting-wallpapers button[aria-pressed=true] { border-color: var(--os-orange); }
+.os-setting-wallpapers button > span:last-child { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 0 4px; font-size: 12px; }
+.os-setting-preview { display: block; height: 95px; border-radius: 7px; background: radial-gradient(ellipse at 85% 30%,#f57427,transparent 45%),linear-gradient(155deg,#370e42 25%,#a13252 60%,#200d29); }
+.os-setting-preview--night { background: radial-gradient(ellipse at 85% 30%,#5165bf,transparent 45%),linear-gradient(155deg,#101529,#292957,#111127); }
+.os-setting-preview--minimal { background: radial-gradient(circle at 70% 35%,#e4aa8c 0 14%,transparent 15%),linear-gradient(165deg,#afa2bb 55%,#464059 56%); }
+.os-setting-accents { display:flex; gap:18px; }
+.os-setting-accents button { width:36px; height:36px; border-radius:50%; display:grid; place-items:center; border:3px solid transparent; }
+.os-setting-accents button[aria-pressed=true] { outline:2px solid var(--os-orange); outline-offset:3px; }
+.os-setting-accents [data-color=orange] {background:#e85a22}.os-setting-accents [data-color=purple]{background:#9254d7}.os-setting-accents [data-color=blue]{background:#2878d0}.os-setting-accents [data-color=green]{background:#268448}
+.os-setting-row { display:flex; justify-content:space-between; align-items:center; gap:16px; border-top:1px solid #ffffff10; padding:14px 0; font-size:12px; }
+.os-setting-row small { display:block; color:#aaa1b3; margin-top:5px; }
+.os-setting-row input { width:18px; height:18px; accent-color:var(--os-orange); flex-shrink:0; }
+.os-setting-row select { border:1px solid #ffffff20; border-radius:7px; background:#29242e; padding:8px; color:#fff; }
+.os-settings-app footer { margin-top:18px; border-top:1px solid #ffffff12; padding-top:18px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.os-settings-app footer p { max-width:330px; color:#aaa1b3; font-size:11px; }
+.naiker-os .os-primary,.naiker-os .os-enter-button { background:var(--os-orange); }
+.naiker-os .os-primary:hover,.naiker-os .os-enter-button:hover { filter:brightness(1.12); }
+.naiker-os[data-motion=reduced] *, .naiker-os[data-motion=reduced] *::before,.naiker-os[data-motion=reduced] *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+.naiker-os .os-desktop--minimal > .os-wallpaper { opacity:0; }
+.naiker-os .os-desktop--night { background:radial-gradient(ellipse at 80% 25%,#263c72,transparent 60%),#101122; }
+.naiker-os .os-desktop--night > .os-wallpaper { filter:grayscale(1); opacity:.18; mix-blend-mode:screen; }
+.naiker-os .os-desktop--minimal { background:radial-gradient(circle at 75% 30%,#e4aa8c 0 8%,transparent 8.2%),linear-gradient(165deg,#81738e 55%,#30293f 55.2%); }
+.naiker-os[data-dock=small] .os-dock .os-app-icon { width:30px; height:30px; }
+.naiker-os[data-dock=large] .os-dock .os-app-icon { width:48px; height:48px; }
+@media(max-width:640px){.os-settings-app{padding:18px}.os-setting-wallpapers{gap:7px}.os-setting-preview{height:65px}.os-settings-app footer{align-items:flex-start;flex-direction:column}.naiker-os[data-dock=large] .os-dock .os-app-icon{width:38px;height:38px}}
+.os-settings-layout { display:grid; grid-template-columns:180px minmax(0,1fr); min-height:100%; }
+.os-settings-sidebar { padding:18px 10px; border-right:1px solid #ffffff12; background:#ffffff03; }
+.os-settings-sidebar button { display:flex; gap:12px; align-items:center; width:100%; padding:13px 12px; border-radius:8px; color:#bfb9c7; font-size:12px; margin-bottom:5px; }
+.os-settings-sidebar button[aria-pressed=true] { background:var(--os-orange); color:white; box-shadow:0 4px 12px #0002; }
+.os-settings-layout .os-settings-app { width:100%; padding:25px; }
+.os-setting-row input { appearance:none; width:38px!important; height:22px!important; border-radius:20px; background:#5c5661; position:relative; cursor:pointer; transition:background .2s; }
+.os-setting-row input::after { content:""; position:absolute; width:16px; height:16px; border-radius:50%; top:3px; left:3px; background:white; transition:transform .2s; }
+.os-setting-row input:checked { background:var(--os-orange); }
+.os-setting-row input:checked::after { transform:translateX(16px); }
+.naiker-os button:focus-visible,.naiker-os select:focus-visible,.naiker-os input:focus-visible { outline:2px solid var(--os-orange); outline-offset:3px; }
+.naiker-os .os-launcher { overflow-y:auto; padding-bottom:110px; }
+.naiker-os .os-launcher-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); width:min(920px,100%); gap:30px 22px; margin:35px auto; }
+.naiker-os .os-launcher-grid button { display:flex; align-items:center; flex-direction:column; justify-content:flex-start; gap:13px; border-radius:15px; padding:14px 8px; font-size:13px; line-height:1.4; transition:background .2s,transform .2s; }
+.naiker-os .os-launcher-grid button:hover { background:#ffffff10; transform:translateY(-3px); }
+.naiker-os .os-app-icon--project { background:linear-gradient(145deg,#5368b6,#24203b); border:1px solid #ffffff25; box-shadow:inset 0 1px 1px #ffffff30,0 5px 10px #0002; }
+.naiker-os .os-dock { max-width:calc(100% - 24px); }
+.naiker-os .os-dock nav { overflow-x:auto; scrollbar-width:none; }
+.naiker-os .os-dock nav button { flex-shrink:0; }
+.naiker-os .os-window-controls button { border-radius:50%; width:28px; height:28px; display:grid; place-items:center; }
+.naiker-os .os-window-controls button:hover { background:#ffffff20; }
+.naiker-os .os-window-controls .os-window-close { background:var(--os-orange); }
+@media(max-width:700px){.os-settings-layout{grid-template-columns:1fr}.os-settings-sidebar{display:flex;padding:8px;border-right:0;border-bottom:1px solid #ffffff12;gap:4px}.os-settings-sidebar button{font-size:10px;padding:10px 7px;justify-content:center;gap:5px;margin:0}.os-settings-layout .os-settings-app{padding:18px}.naiker-os .os-launcher-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 5px}.naiker-os .os-launcher-grid button{font-size:11px}.naiker-os .os-launcher-grid .os-app-icon{width:58px;height:58px}}
+.os-color-modes{display:grid;grid-template-columns:1fr 1fr;gap:14px}.os-color-modes button{border:2px solid transparent;border-radius:10px;padding:7px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}.os-color-modes button[aria-pressed=true]{border-color:var(--os-orange)}.os-color-mode-preview{display:flex;flex-direction:column;gap:8px;padding:15px;border-radius:6px;width:100%;height:75px;background:#29272e}.os-color-mode-preview i{height:6px;width:70%;border-radius:3px;background:#57535e}.os-color-mode-preview i:first-child{background:var(--os-orange);width:35%}.os-color-mode-preview--light{background:#f2eff5}.os-color-mode-preview--light i{background:#d3cdd9}
+.naiker-os[data-theme=light] .os-window { background:#f4f2f7; color:#25212d; border-color:#bdb6c8; }
+.naiker-os[data-theme=light] .os-window-titlebar { background:#e8e4ed; color:#25212d; border-color:#d3ccd9; }
+.naiker-os[data-theme=light] .os-window-content { background:#f4f2f7; }
+.naiker-os[data-theme=light] .os-window p,.naiker-os[data-theme=light] .os-window small,.naiker-os[data-theme=light] .os-settings-sidebar button { color:#62576e; }
+.naiker-os[data-theme=light] .os-settings-sidebar button[aria-pressed=true]{color:white}
+.naiker-os[data-theme=light] .os-secondary,.naiker-os[data-theme=light] select { background:#e6e1eb; color:#31283d; border-color:#c5bdcf; }
+.naiker-os[data-theme=light] .os-skill-chips span { background:#e8e2ef; color:#4d405d; border-color:#cbc1d6; }
+.naiker-os[data-theme=light] .os-project-preview,.naiker-os[data-theme=light] .os-project-info {background:#f4f2f7;color:#25212d}
+.naiker-os[data-theme=light] .os-project-info h3,.naiker-os[data-theme=light] .os-about h3 {color:#25212d}
+.naiker-os[data-theme=light] .os-primary {color:white}

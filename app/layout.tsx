@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAssetPath } from "@/lib/assets";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 
@@ -19,11 +20,12 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Naiker | Code Clean",
-  description: "Portafolio profesional de un desarrollador especializado en experiencias digitales modernas y de alto rendimiento.",
+  icons: { icon: getAssetPath("/icons/naiker-os.svg"), apple: getAssetPath("/icons/naiker-os.svg") },
+  title: "Naiker OS | Portafolio",
+  description: "Explora el portafolio de Naiker Alberto Gomez Caraballo, ingeniero de software, en un escritorio inspirado en Ubuntu. Proyectos, tecnologías y CV.",
 };
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export default function RootLayout({
   children,

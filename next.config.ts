@@ -1,27 +1,11 @@
 import type { NextConfig } from "next";
-
-const isProd = process.env.NODE_ENV === 'production';
-const repoName = "Portafolio-Clean-Code";
+import { basePath } from "./lib/assets";
 
 const nextConfig: NextConfig = {
-  output: isProd ? "export" : undefined,
-  basePath: isProd ? `/${repoName}` : undefined,
+  output: process.env.NODE_ENV === "production" ? "export" : undefined,
+  basePath,
   trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  // @ts-ignore
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  experimental: {
-    // turbopack: {
-    //   root: process.cwd(),
-    // },
-  },
+  images: { unoptimized: true },
 };
 
-
-
 export default nextConfig;
-

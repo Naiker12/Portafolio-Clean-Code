@@ -7,6 +7,7 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+    "public/pdf/**",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
@@ -16,3 +17,4 @@ const eslintConfig = defineConfig([
 ]);
 
 export default eslintConfig;
+

@@ -1,0 +1,23 @@
+.os-topbar > button,.os-topbar-title,.os-topbar-right button { display:flex; align-items:center; gap:7px; }
+.os-launcher-app { display:flex; flex-direction:column; align-items:center; }
+.os-launcher-app > button:first-child { width:100%; }
+.os-launcher-grid .os-pin-app { padding:6px 10px; font-size:10px; gap:0; border:1px solid #ffffff18; border-radius:6px; color:#c5b8cb; }
+.os-launcher-grid .os-pin-app[aria-pressed="true"] { color:var(--os-orange); border-color:var(--os-orange); }
+.os-desktop .os-shortcuts { max-height:calc(100% - 180px); flex-wrap:wrap; align-content:flex-start; gap:12px; }
+.os-system-backdrop { position:fixed; inset:36px 0 0; z-index:60; background:#0002; }
+.os-system-menu { position:absolute; right:12px; top:43px; z-index:61; width:min(330px,calc(100vw - 24px)); padding:18px; display:grid; gap:8px; background:#262329; color:#f3edf5; border:1px solid #ffffff25; border-radius:16px; box-shadow:0 20px 60px #0008; }
+.os-system-menu small { font-size:11px; color:#bfb4c5; line-height:1.6; }
+.os-system-menu button { display:flex; align-items:center; gap:12px; padding:12px; text-align:left; border-radius:9px; }
+.os-system-menu button:hover { background:#ffffff12; }
+.os-system-menu button:focus-visible { outline:2px solid var(--os-orange); }
+.os-desktop .os-managed-window.os-window--snap-left,.os-desktop .os-managed-window.os-window--snap-right { top:44px!important; width:calc(50% - 15px); height:calc(100% - 140px); }
+.os-desktop .os-managed-window.os-window--snap-left { left:10px!important; }
+.os-desktop .os-managed-window.os-window--snap-right { left:calc(50% + 5px)!important; }
+.os-window--snap-left .os-project-detail-layout,.os-window--snap-right .os-project-detail-layout { grid-template-columns:1fr; }
+.os-about-experience { display:grid; gap:16px; margin:26px 0; }
+.os-about-experience article { border-left:2px solid var(--os-orange); padding:4px 0 4px 16px; }
+.os-about-experience small { display:block; color:#bbaec0; margin:6px 0; }
+.os-about-experience p { font-size:13px; line-height:1.8; color:#c8bdcc; }
+.os-demo-browser iframe { width:100%; height:520px; border:0; background:white; border-radius:0 0 10px 10px; }
+.os-demo-browser > p { font-size:11px; line-height:1.6; padding:10px; color:#bbafc3; }
+@media(max-width:640px) { .os-snap-control { display:none!important; } .os-desktop .os-managed-window.os-window--snap-left,.os-desktop .os-managed-window.os-window--snap-right { left:7px!important; top:43px!important; width:calc(100% - 14px);height:calc(100% - 133px); } .os-topbar-title svg { display:none; } }

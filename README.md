@@ -1,89 +1,65 @@
-# 🚀 Portafolio Professional
+# Portafolio · Naiker OS
 
-<div align="center">
-  <img src="app/assets/porfolio.png" alt="Portfolio Preview" width="100%" style="border-radius: 10px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"/>
-</div>
+Portafolio de Naiker construido con Next.js 16, React 19, TypeScript y Tailwind CSS 4. La ruta principal presenta una bienvenida con acceso animado y un escritorio inspirado en Ubuntu.
 
-<br/>
+![Portafolio actual](public/images/profile/porfolio.png)
 
-## 📖 Descripción
-Este proyecto es un portafolio web moderno y profesional diseñado para destacar habilidades técnicas y proyectos de desarrollo. Construido con las últimas tecnologías del ecosistema React, ofrece una experiencia de usuario fluida, animaciones dinámicas y un diseño totalmente responsivo. Ideal para ingenieros de software, desarrolladores full-stack y creadores de contenido técnico que buscan una presencia online impactante.
+## Organización
 
-## 🛠️ Tecnologías Utilizadas
-El proyecto utiliza un stack tecnológico de vanguardia para garantizar rendimiento y escalabilidad:
-
-*   **Core**: [Next.js 16](https://nextjs.org/) (App Directory) & [React 19](https://react.dev/)
-*   **Estilos**: [Tailwind CSS 4](https://tailwindcss.com/)
-*   **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
-*   **Animaciones**: [Framer Motion](https://www.framer.com/motion/) & Motion
-*   **Iconos**: Lucide React
-*   **Temas**: Next-themes (Dark/Light mode support)
-*   **Utilidades**: clsx, tailwind-merge
-
-## 📂 Estructura del Proyecto
-
-La arquitectura del proyecto está organizada para ser intuitiva y escalable:
-
-```bash
-portafolio/
-├── app/                # Rutas y lógica principal (Next.js App Router)
-│   ├── assets/         # Recursos estáticos (imágenes como porfolio.png)
-│   ├── globals.css     # Estilos globales y directivas de Tailwind
-│   ├── layout.tsx      # Layout raíz de la aplicación
-│   └── page.tsx        # Página de inicio
-├── components/         # Biblioteca de componentes reutilizables
-│   ├── ui/             # Componentes base de UI (botones, inputs, cards)
-│   ├── Hero.tsx        # Sección de bienvenida y presentación
-│   ├── Navbar.tsx      # Barra de navegación y control de temas
-│   ├── Projects.tsx    # Galería de proyectos destacados
-│   ├── Skills.tsx      # Visualización de habilidades técnicas
-│   └── ...
-├── public/             # Archivos estáticos accesibles públicamente
-└── package.json        # Definición de dependencias y scripts
+```text
+app/                           Rutas, layout y estilos globales
+features/portfolio/
+  components/                  Secciones actuales del portafolio
+  data/                        Experiencia, redes y tecnologías
+  model/                       Tipos del contenido
+features/session/              Bienvenida y acceso animado
+features/desktop/              Escritorio, aplicaciones y reloj
+features/projects/             Catálogo, tipos y galería de proyectos
+features/window-manager/       Estado, marcos de ventana y Actividades
+components/
+  effects/                     Animaciones y componentes decorativos
+  icons/                       Iconos de redes y categorías
+  providers/                   Proveedor de tema
+hooks/                         Hooks compartidos
+lib/                           Utilidades y rutas de recursos
+public/
+  images/profile/              Fotos y vista previa
+  images/                      Capturas de los siete proyectos
+  icons/technologies/          SVG locales
+  cv-naiker.pdf                CV descargable
+docs/                          Inventario y arquitectura de Naiker OS
 ```
 
-## 🚀 Instalación y Puesta en Marcha
+shadcn/ui está configurado en `components.json`. Su carpeta `components/ui` se creará al añadir las primeras primitivas. Lucide proporciona los iconos y Framer Motion las animaciones.
 
-Sigue estos pasos para desplegar el proyecto en tu entorno local:
+## Desarrollo
 
-1.  **Clonar el repositorio**
-    ```bash
-    git clone https://github.com/Naiker12/Portafolio-Clean-Code.git
-    cd portafolio
-    ```
+```bash
+npm ci
+npm run dev
+```
 
-2.  **Instalar dependencias**
-    Asegúrate de tener Node.js instalado.
-    ```bash
-    npm install
-    # o si usas yarn
-    yarn install
-    ```
+Abre http://localhost:3000. Edita el contenido en `features/portfolio/data` y su presentación en `features/portfolio/components`.
 
-3.  **Ejecutar servidor de desarrollo**
-    ```bash
-    npm run dev
-    ```
-    Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación en funcionamiento.
+## Validación y publicación
 
-## 🧩 Uso de Componentes
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
 
-El desarrollo se basa en componentes modulares ubicados en la carpeta `components/`. 
-- **Modificación**: Para editar una sección (ej. "Sobre Mí"), navega al archivo correspondiente (ej. `components/About.tsx`) y modifica el contenido JSX.
-- **Estilos**: Usamos clases de utilidad de Tailwind CSS directamente en el JSX para un desarrollo rápido y consistente.
-- **Iconos**: Importamos iconos de `lucide-react` para mantener una estética limpia y vectorial.
+El build de producción exporta el sitio a `out/` para GitHub Pages, con el prefijo `/Portafolio-Clean-Code`. En desarrollo los recursos usan la raíz `/`. Ambas decisiones se centralizan en `lib/assets.ts`.
 
-## � Scripts Disponibles
+El workflow `.github/workflows/deploy.yml` instala desde el lockfile, ejecuta lint, tipos y build y publica en GitHub Pages. El script heredado `npm run deploy` agrega, confirma y sube todos los cambios; no forma parte de la validación local.
 
-En el archivo `package.json` se definen los siguientes comandos útiles:
+## Plan de Naiker OS
 
-- `npm run dev`: Inicia el entorno de desarrollo local.
-- `npm run build`: Compila la aplicación para producción.
-- `npm run start`: Inicia el servidor de producción optimizado.
-- `npm run lint`: Ejecuta el análisis estático de código (ESLint).
-- `npm run deploy`: Script personalizado para automatizar el despliegue (Git add, commit y push).
-
-## ✒️ Autor
-**Naiker** - *Ingeniero de Software & Creador de Contenido*
-<br/>
-Construyendo el futuro con **Clean Code** y arquitecturas escalables.
+- [Inventario antes de la reorganización](docs/estructura-actual.md)
+- [Estructura organizada](docs/estructura-organizada.md)
+- [Arquitectura y análisis de las nueve referencias](docs/arquitectura-naiker-os.md)
+- [Cambios de la primera parte](docs/base-limpia.md)
+- [Bienvenida y primer escritorio](docs/entrada-naiker-os.md)
+- [Gestor de ventanas](docs/gestor-ventanas.md)
+- [Perfil y explorador de proyectos](docs/explorador-proyectos.md)
