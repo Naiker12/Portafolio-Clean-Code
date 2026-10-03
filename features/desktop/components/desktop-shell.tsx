@@ -31,7 +31,7 @@ export function DesktopShell({ onSessionAction }: { onSessionAction: (action: "l
   const [search, setSearch] = useSessionState("search", "");
   const [notification, setNotification] = useState(true);
   const { preferences } = usePreferences();
-  const desktopTitle = useRef<HTMLHeadingElement>(null);
+  const desktopTitle = useRef<HTMLElement>(null);
   const launcherInput = useRef<HTMLInputElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
   const { time, day } = useClock();
@@ -66,7 +66,7 @@ export function DesktopShell({ onSessionAction }: { onSessionAction: (action: "l
   };
 
   return (
-    <main className={`os-desktop os-desktop--${preferences.wallpaper}`} onKeyDown={event => {
+    <main ref={desktopTitle} tabIndex={-1} aria-label="Escritorio de Naiker OS" className={`os-desktop os-desktop--${preferences.wallpaper}`} onKeyDown={event => {
       if (event.key === "Escape") setSystemMenu(false);
       if (event.altKey && windows.focused && (event.key === "ArrowLeft" || event.key === "ArrowRight")) { event.preventDefault(); dispatch({type:"snap",id:windows.focused,side:event.key === "ArrowLeft" ? "left" : "right"}); }
       if (event.key === "Escape" && (launcher || activities)) { setLauncher(false); setActivities(false); previousFocus.current?.focus(); }
@@ -75,7 +75,6 @@ export function DesktopShell({ onSessionAction }: { onSessionAction: (action: "l
       <header className="os-topbar"><button aria-expanded={activities} onClick={() => { previousFocus.current = document.activeElement as HTMLElement; setLauncher(false); setActivities(value => !value); }}><PanelsTopLeft size={15} /> Actividades</button><span className="os-topbar-title"><Monitor size={14} /> Naiker OS</span><div className="os-topbar-right"><span>{day} · {time}</span><button aria-label="Controles del sistema" aria-expanded={systemMenu} aria-controls="os-system-menu" onClick={() => setSystemMenu(value => !value)}><Settings size={16} /><ChevronDown size={14} /></button></div></header>
       {systemMenu && <><button className="os-system-backdrop" aria-label="Cerrar controles del sistema" onClick={() => setSystemMenu(false)} /><section id="os-system-menu" className="os-system-menu" aria-label="Controles del sistema"><strong>Naiker OS</strong><small>Sesión de visitante · Portafolio interactivo</small><button onClick={() => {open("settings");setSystemMenu(false);}}><Settings size={17} /> Configuración</button><button onClick={() => {setLauncher(false);setActivities(false);setWindows(state => ({...state,focused:null,windows:state.windows.map(entry => ({...entry,minimized:true}))}));setSystemMenu(false);}}><Monitor size={17} /> Mostrar escritorio</button><button onClick={() => onSessionAction("lock")}><LockKeyhole size={17} /> Bloquear pantalla</button><button onClick={() => {setWindows(initialWindows);setLauncher(false);setActivities(false);setSearch("");setAppFilter("all");onSessionAction("logout");}}><LogOut size={17} /> Cerrar sesión de visitante</button><button onClick={() => {setWindows(initialWindows);setLauncher(false);setActivities(false);setSearch("");setAppFilter("all");onSessionAction("restart");}}><RotateCcw size={17} /> Reiniciar escritorio</button><small>Alt + ← / →: dividir la ventana activa.</small></section></>}
       {preferences.shortcuts && <nav className="os-shortcuts" aria-label="Aplicaciones del escritorio">{desktopApps.filter(item => pins.includes(item.id)).map(item => <button key={item.id} onClick={() => open(item.id)}><ApplicationIcon id={item.id} /><span>{item.title}</span></button>)}</nav>}
-      <div className="os-desktop-hero"><span className="os-desktop-kicker"><span /> DISPONIBLE PARA CREAR</span><h1 ref={desktopTitle} tabIndex={-1}>Naiker<span>.</span></h1><p>Ingeniero de Software</p><small>Desarrollo backend <span>·</span> Clean Code</small></div>
       <div className="os-wallpaper-signature"><Code2 size={32} /><span>naiker.codes</span></div>
 
       <div className="os-window-layer" inert={launcher || activities}>
